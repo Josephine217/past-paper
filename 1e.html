@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1e - Corrected Student Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        .error-box { background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 15px; margin-bottom: 20px; }
+        .form-box { background-color: #d4edda; border: 1px solid #c3e6cb; padding: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="error-box">
+        <h2>Errors Identified and Corrected:</h2>
+        <ol>
+            <li>
+                <strong>Error:</strong> The radio buttons used different 'name' attributes (<code>name="gender"</code> and <code>name="sex"</code>).<br>
+                <strong>Correction:</strong> Both are now set to <code>name="gender"</code>.<br>
+                <strong>Why:</strong> Radio buttons must share the same name to group together. Otherwise, a user could select both Male and Female at the same time.
+            </li>
+            <li>
+                <strong>Error:</strong> Capitalized tags/attributes like <code>Type=text</code> and <code>&lt;Form&gt;</code>.<br>
+                <strong>Correction:</strong> Changed to lowercase (<code>type="text"</code>, <code>&lt;form&gt;</code>).<br>
+                <strong>Why:</strong> Standard HTML5 practice requires lowercase attributes for strict validation.
+            </li>
+            <li>
+                <strong>Error:</strong> Missing quotation marks around attribute values (e.g., <code>Type=text</code>).<br>
+                <strong>Correction:</strong> Added quotes (<code>type="text"</code>, <code>value="Register"</code>).<br>
+                <strong>Why:</strong> Attribute values must be enclosed in quotes to be valid HTML and prevent the code from breaking.
+            </li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <div class="form-box">
+        <h2>The Corrected Form (Output):</h2>
+        <form>
+            <!-- Corrected Inputs -->
+            <input type="text" name="studentName">
+            <br><br>
+
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <br><br>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+</body>
+</html>

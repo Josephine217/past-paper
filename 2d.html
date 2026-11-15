@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2d - Importance of Alt Attribute</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        .container { max-width: 800px; margin: auto; }
+        .importance-box { background-color: #e8f4f8; border-left: 5px solid #2980b9; padding: 15px; margin-bottom: 20px; }
+        .consequences-box { background-color: #fff3cd; border-left: 5px solid #ffc107; padding: 15px; margin-bottom: 20px; }
+        .code-example { background-color: #f4f4f4; border: 1px solid #ccc; padding: 15px; font-family: monospace; }
+        h2, h3 { color: #2c3e50; }
+        ul { margin-top: 10px; }
+        li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>2(d) Importance of the 'alt' Attribute</h1>
+
+    <!-- EVALUATION -->
+    <div class="importance-box">
+        <h2>Evaluation of Importance</h2>
+        <p>The <code>alt</code> (alternative text) attribute provides a textual description of an image. It is a crucial accessibility feature, ensuring that web content is usable by everyone, regardless of their abilities or the device they use. For a public health website, where critical information must be universally understood, the <code>alt</code> attribute is vital.</p>
+    </div>
+
+    <!-- FOUR CONSEQUENCES -->
+    <div class="consequences-box">
+        <h2>Four Consequences of Missing Alt Text (For Different User Categories)</h2>
+        <ul>
+            <li><strong>1. Visually Impaired Users (Accessibility):</strong> Screen readers rely entirely on alt text to describe images. Without it, a blind user will just hear the word "image" or the file name (e.g., "covid_flyer_01.jpg"), completely missing the health information or instructions contained in the image.</li>
+            
+            <li><strong>2. Users on Slow or Unstable Internet Connections:</strong> In regions with poor connectivity, images often fail to load. Without alt text, users see an empty box or a broken link icon. With alt text, they can still read the description (e.g., "Poster showing how to wash hands properly") and understand the message.</li>
+            
+            <li><strong>3. Search Engine Users (SEO):</strong> Search engines like Google cannot "see" images; they read the alt text to understand what the image is about. If 80% of the images lack alt text, the website's search ranking will drop, making it harder for citizens to find vital health information online.</li>
+            
+            <li><strong>4. Users with Blocked Images:</strong> Many corporate networks, email clients, or low-data browser settings block images by default to save bandwidth. Users in these categories will only see the alt text. If it's missing, the health graphic is completely lost to them.</li>
+        </ul>
+    </div>
+
+    <!-- CODE EXAMPLE -->
+    <div class="code-example">
+        <h3>Coded Example:</h3>
+        <p><strong>Incorrect (Missing Alt Text):</strong></p>
+        <p>&lt;img src="health-poster.jpg"&gt;</p>
+        <br>
+        <p><strong>Correct (With Alt Text):</strong></p>
+        <!-- Live Example: If the image doesn't exist, the alt text will display -->
+        <img src="health-poster.jpg" alt="Poster showing proper handwashing steps to prevent COVID-19" width="300" style="border: 1px dashed red;">
+        <p><em>(Note: Since the image file doesn't exist on your computer, the browser is displaying the alt text inside a broken image box. This proves the alt text works!)</em></p>
+    </div>
+
+</div>
+
+</body>
+</html>

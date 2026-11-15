@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3a - CSS Selector Types</title>
+    
+    <style>
+        /* 
+           =========================================
+           WORKING CSS RULES FOR UNIVERSITY WEBSITE
+           =========================================
+        */
+
+        /* i. Universal Selector (*) */
+        /* Applies to all elements. Here, it sets a default font for the whole page. */
+        * {
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* ii. Class Selector (.classname) */
+        /* Applies to elements with class="student-card". Applied to a course card. */
+        .student-card {
+            border: 2px solid #2980b9;
+            background-color: #e8f4f8;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        /* iii. ID Selector (#idname) */
+        /* Applies to the unique element with id="main-title". Applied to the main page title. */
+        #main-title {
+            color: #c0392b;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* iv. Descendant Selector (parent child) */
+        /* Applies to <a> tags only if they are inside a <nav> tag. Applied to the menu. */
+        nav a {
+            color: white;
+            background-color: #2c3e50;
+            padding: 8px 15px;
+            text-decoration: none;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        /* v. Pseudo-class Selector (:hover) */
+        /* Applies when the user hovers over the element. Applied to the menu links. */
+        nav a:hover {
+            background-color: #e67e22;
+            color: black;
+        }
+
+        /* vi. Attribute Selector ([type="text"]) */
+        /* Applies to inputs that specifically have type="text". Applied to the search box. */
+        input[type="text"] {
+            border: 2px dashed #27ae60;
+            padding: 8px;
+            background-color: #f1f8f3;
+        }
+        
+        /* General styling for the page layout */
+        body { padding: 20px; line-height: 1.6; }
+        .explanation { margin-bottom: 20px; background: #f9f9f9; padding: 10px; border-left: 4px solid #333; }
+        code { background: #eee; padding: 2px 5px; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+    <h1 id="main-title">University Portal (Demo Page)</h1>
+
+    <!-- i. Universal Selector -->
+    <div class="explanation">
+        <strong>i. Universal Selector (<code>*</code>)</strong><br>
+        <em>Explanation:</em> Selects all elements on the page. <br>
+        <em>Rule used:</em> <code>* { font-family: Arial, sans-serif; }</code> (Applied to the whole page).
+    </div>
+
+    <!-- ii. Class Selector -->
+    <div class="explanation">
+        <strong>ii. Class Selector (<code>.classname</code>)</strong><br>
+        <em>Explanation:</em> Selects elements with a specific class attribute. Used for reusable styles.<br>
+        <em>Rule used:</em> <code>.student-card { border: 2px solid #2980b9; }</code> 
+    </div>
+    <div class="student-card">
+        <h3>Computer Science 101</h3>
+        <p>Click to view course details.</p>
+    </div>
+
+    <!-- iii. ID Selector -->
+    <div class="explanation">
+        <strong>iii. ID Selector (<code>#idname</code>)</strong><br>
+        <em>Explanation:</em> Selects a single, unique element with a specific ID. Used for main page elements.<br>
+        <em>Rule used:</em> <code>#main-title { color: #c0392b; }</code> (Applied to the main heading above).
+    </div>
+
+    <!-- iv. Descendant Selector -->
+    <div class="explanation">
+        <strong>iv. Descendant Selector (<code>parent child</code>)</strong><br>
+        <em>Explanation:</em> Selects an element only if it is inside another specific element.<br>
+        <em>Rule used:</em> <code>nav a { background-color: #2c3e50; }</code> (Styles links only inside the nav bar below).
+    </div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Library</a>
+    </nav>
+
+    <!-- v. Pseudo-class Selector -->
+    <div class="explanation">
+        <strong>v. Pseudo-class Selector (<code>:hover</code>)</strong><br>
+        <em>Explanation:</em> Selects an element when a specific state occurs (like hovering the mouse).<br>
+        <em>Rule used:</em> <code>nav a:hover { background-color: #e67e22; }</code> 
+        <br><em>(Action: Hover your mouse over the dark blue menu links above to see them turn orange).</em>
+    </div>
+
+    <!-- vi. Attribute Selector -->
+    <div class="explanation">
+        <strong>vi. Attribute Selector (<code>[type="text"]</code>)</strong><br>
+        <em>Explanation:</em> Selects elements based on a specific attribute or attribute value.<br>
+        <em>Rule used:</em> <code>input[type="text"] { border: 2px dashed #27ae60; }</code> 
+    </div>
+    <div>
+        <label>Search Student: </label>
+        <input type="text" placeholder="Type name here...">
+        <input type="submit" value="Search">
+    </div>
+
+</body>
+</html>

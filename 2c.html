@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2c - Absolute vs Relative Hyperlinks</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        .container { max-width: 800px; margin: auto; }
+        .analysis-box { background-color: #e8f4f8; border-left: 5px solid #2980b9; padding: 15px; margin-bottom: 20px; }
+        .example-box { background-color: #f9f9f9; border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; }
+        h2 { color: #2c3e50; }
+        h3 { color: #e74c3c; }
+        a { color: #2980b9; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Hyperlink Analysis for a Bank Intranet</h1>
+
+    <!-- WRITTEN ANALYSIS -->
+    <div class="analysis-box">
+        <h2>Analysis of Hyperlinks</h2>
+        
+        <h3>1. Absolute Hyperlinks</h3>
+        <p><strong>Definition:</strong> An absolute link contains the complete URL, including the protocol (http/https) and the domain name. It points to a specific, fixed location on the internet.</p>
+        <p><strong>When to use in a bank intranet:</strong> Use absolute links when directing users to <strong>external websites</strong> outside the bank's internal network. For example, linking to the Central Bank of Kenya's website for regulatory guidelines, or a third-party pension provider's portal.</p>
+
+        <h3>2. Relative Hyperlinks</h3>
+        <p><strong>Definition:</strong> A relative link points to a file or page relative to the location of the current document. It does not include the domain name (e.g., just `hr/leave.html`).</p>
+        <p><strong>When to use in a bank intranet:</strong> Use relative links for <strong>internal navigation</strong> within the intranet itself. For example, linking from the main staff dashboard to the internal HR leave application form, or the monthly payroll page.</p>
+    </div>
+
+    <!-- LIVE EXAMPLES -->
+    <div class="example-box">
+        <h2>Live Examples</h2>
+        
+        <h3>Example of an Absolute Link (External)</h3>
+        <p>Clicking this takes you to an external website (The Central Bank of Kenya). Notice the full URL including "https://".</p>
+        <a href="https://www.centralbank.go.ke" target="_blank">Visit Central Bank of Kenya (Absolute Link)</a>
+        
+        <br><br><hr><br>
+
+        <h3>Example of a Relative Link (Internal)</h3>
+        <p>Clicking this would typically take you to another page within the intranet (like an HR form). Because we don't have the actual intranet files, this is just a coded example. Notice there is no "https://".</p>
+        <!-- This link would work if you had a file named 'leave_form.html' in the same folder -->
+        <a href="leave_form.html">Download Staff Leave Form (Relative Link)</a>
+    </div>
+
+</div>
+
+</body>
+</html>

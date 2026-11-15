@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3b - Kenyan News Portal Navbar</title>
+    
+    <style>
+        /* Basic page reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 1. Navbar Container (Dark background and Horizontal layout) */
+        .navbar {
+            background-color: #1a1a2e; /* Dark background as requested */
+        }
+
+        /* Remove default list styling to make it horizontal */
+        .navbar ul {
+            list-style-type: none; /* Removes bullet points */
+            margin: 0;
+            padding: 0;
+            display: flex;         /* Makes the list horizontal */
+            justify-content: space-around; /* 2. Evenly spaces the links */
+        }
+
+        /* 3. Link Styling */
+        .navbar a {
+            display: block;
+            color: white;          /* White link text as requested */
+            text-decoration: none; /* No underline as requested */
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 4. Hover Effect */
+        .navbar a:hover {
+            color: #f0a500;        /* Orange on hover as requested */
+            background-color: #2a2a4e; /* Optional: Adds a subtle background change on hover for better UX */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML Structure for the Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Just some dummy content to show the navbar in context -->
+    <div style="padding: 20px;">
+        <h1>Welcome to the News Portal</h1>
+        <p>Hover over the navigation links above to see them turn orange.</p>
+    </div>
+
+</body>
+</html>
